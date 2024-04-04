@@ -26,3 +26,25 @@ Stack trace:
 #8 C:\xampp2\htdocs\image-accordion-gallery\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
 #9 C:\xampp2\htdocs\image-accordion-gallery\spark(102): CodeIgniter\CLI\Console->run()
 #10 {main}
+CRITICAL - 2024-04-04 17:01:54 --> PDOException: SQLSTATE[HY000] [1049] Unknown database 'imagens'
+in APPPATH\Views\galeria.php on line 98.
+ 1 APPPATH\Views\galeria.php(98): PDO->__construct('mysql:host=localhost;dbname=imagens', 'root', Object(SensitiveParameterValue))
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp2\\htdocs\\image-accordion-gallery\\app\\Views\\galeria.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('galeria', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('galeria')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-04 17:02:20 --> PDOException: SQLSTATE[HY000] [1049] Unknown database 'imagens_galeria'
+in APPPATH\Views\galeria.php on line 98.
+ 1 APPPATH\Views\galeria.php(98): PDO->__construct('mysql:host=localhost;dbname=imagens_galeria', 'root', Object(SensitiveParameterValue))
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp2\\htdocs\\image-accordion-gallery\\app\\Views\\galeria.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('galeria', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('galeria')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

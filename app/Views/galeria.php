@@ -94,17 +94,23 @@
 
         <div class="gallery-container">
             <?php
-            $stmt = $conn->prepare("SELECT * FROM tbl_image");
+
+            $conn = new PDO("mysql:host=localhost;dbname=imagem_galeria", "root", "");
+
+
+
+            $stmt = $conn->prepare("SELECT * FROM imagens");
             $stmt->execute();
 
             $result = $stmt->fetchAll();
-
+            //dd($result);
             foreach ($result as $row) {
-                $imageId = $row['tbl_image_id'];
-                $image = $row['image_name'];
+                $imageId = $row['id'];
+                $image = $row['nome'];
             ?>
                 <div class="item">
-                    <img src="./images/<?= $image ?>" alt="">
+                
+                    <img src="<?= base_url('public/imagens/') . $image ?>" alt="">
                     <button class="btn btn-dark" style="display: none;" onclick="deleteImage(<?= $imageId ?>)">x</button>
                 </div>
             <?php
