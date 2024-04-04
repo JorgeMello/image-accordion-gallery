@@ -176,7 +176,7 @@
 
         function deleteImage(id) {
             if (confirm("Gostaria de excluir esta imagem?")) {
-                window.location = "<?= base_url('incluirimagem') ?>/" + id;
+                window.location = "<?= base_url('excluirimagem') ?>/" + id;
             }
         }
     </script>

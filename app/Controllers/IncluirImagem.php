@@ -22,6 +22,7 @@ class IncluirImagem extends BaseController
  */
         $arquivo = $this->request->getFile('image_name');
         $arquivo_nome = $arquivo->getName('image_name');
+
         //dd($arquivo->getClientName());
         //dd($arquivo->getName()); nome original do arquivo
 
@@ -40,11 +41,16 @@ class IncluirImagem extends BaseController
         //MOVE PARA O DIRETORIO public, NA PASTA imagens
         //$arquivo->move('public/imagens');
 
+        //MOVE PARA O DIRETORIO raiz, NA PASTA public/imagens
+        //$arquivo->move(ROOTPATH . 'public/imagens');
+
         //criando um nome único para o arquivo
         $nome_unico_imagem = uniqid() . '_' . $arquivo_nome;
+        $nome_randomico = $arquivo->getRandomName();
 
         //MOVE PARA O DIRETORIO public, NA PASTA imagens, com o nome único
         $arquivo->move('public/imagens', $nome_unico_imagem);
+       // $arquivo->move('public/imagens', $nome_randomico);
 
 
         $db = \Config\Database::connect();

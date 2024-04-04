@@ -110,3 +110,47 @@ in APPPATH\Controllers\IncluirImagem.php on line 56.
  5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-04 20:47:33 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\ExcluirImagem.php on line 15.
+ 1 APPPATH\Controllers\ExcluirImagem.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp2\\htdocs\\image-accordion-gallery\\app\\Controllers\\ExcluirImagem.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ExcluirImagem->index('6')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcluirImagem))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-04 20:50:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '<?= 6 ?>' at line 1 in C:\xampp2\htdocs\image-accordion-gallery\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp2\htdocs\image-accordion-gallery\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nome FRO...', 0)
+#1 C:\xampp2\htdocs\image-accordion-gallery\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome FRO...')
+#2 C:\xampp2\htdocs\image-accordion-gallery\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome FRO...')
+#3 C:\xampp2\htdocs\image-accordion-gallery\app\Controllers\ExcluirImagem.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome FRO...')
+#4 C:\xampp2\htdocs\image-accordion-gallery\system\CodeIgniter.php(943): App\Controllers\ExcluirImagem->index('6')
+#5 C:\xampp2\htdocs\image-accordion-gallery\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcluirImagem))
+#6 C:\xampp2\htdocs\image-accordion-gallery\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp2\htdocs\image-accordion-gallery\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-04-04 20:50:06 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '<?= 6 ?>' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\ExcluirImagem.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome FROM imagens WHERE id = <?= 6 ?>')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ExcluirImagem->index('6')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcluirImagem))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-04 20:50:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '<?= 6 ?>' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome FROM imagens WHERE id = <?= 6 ?>')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome FROM imagens WHERE id = <?= 6 ?>')
+ 3 APPPATH\Controllers\ExcluirImagem.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome FROM imagens WHERE id = <?= 6 ?>')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ExcluirImagem->index('6')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcluirImagem))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-04 20:50:06 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '<?= 6 ?>' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT nome FROM imagens WHERE id = <?= 6 ?>', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome FROM imagens WHERE id = <?= 6 ?>')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome FROM imagens WHERE id = <?= 6 ?>')
+ 4 APPPATH\Controllers\ExcluirImagem.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome FROM imagens WHERE id = <?= 6 ?>')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ExcluirImagem->index('6')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcluirImagem))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
