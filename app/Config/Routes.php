@@ -7,3 +7,5 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->post('/incluirimagem', 'IncluirImagem::index');
+$routes->get('/excluirimagem', 'ExcluirImagem::index');
+
