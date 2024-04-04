@@ -75,7 +75,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="./endpoint/add-image.php" method="POST" enctype="multipart/form-data">
+                    <form action="<?= base_url('incluirimagem') ?>" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="image_name">Selecione a Imagem:</label>
                             <input type="file" class="form-control-file" id="imageName" name="image_name">
