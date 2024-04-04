@@ -126,10 +126,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 
-    <!-- Script JS -->
-    <script src="./assets/script.js"></script>
-
-
+ 
     <script>
         let deviceType = "";
         let events = {
@@ -178,8 +175,8 @@
 
 
         function deleteImage(id) {
-            if (confirm("Do you want to delete this image?")) {
-                window.location = "./endpoint/delete-image.php?image=" + id;
+            if (confirm("Gostaria de excluir esta imagem?")) {
+                window.location = "<?= base_url('incluirimagem') ?>/" + id;
             }
         }
     </script>
