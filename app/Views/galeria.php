@@ -17,7 +17,7 @@
         }
 
         body {
-            background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+            background-image: linear-gradient(to left top, blue, red);
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
@@ -59,9 +59,9 @@
 
 <body>
 
-    <div class="alert alert-primary text-center p-5" role="alert">
-        <h1>Image Accordion Gallery App</h1>
-        <button class="btn btn-primary" data-target="#addImageModal" data-toggle="modal">Add Image</button>
+    <div class="alert alert-success text-center p-5" role="alert">
+        <h1>GALERIA DE IMAGENS EM CODEIGNITER 4</h1>
+        <button class="btn btn-success" data-target="#addImageModal" data-toggle="modal">Adicionar Imagem</button>
     </div>
 
     <!-- Modal -->
@@ -69,7 +69,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addImage">Add Image</h5>
+                    <h5 class="modal-title" id="addImage">Adicionar uma Imagem</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -77,7 +77,7 @@
                 <div class="modal-body">
                     <form action="./endpoint/add-image.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="image_name">Image:</label>
+                            <label for="image_name">Selecione a Imagem:</label>
                             <input type="file" class="form-control-file" id="imageName" name="image_name">
                         </div>
                         <div class="modal-footer">
