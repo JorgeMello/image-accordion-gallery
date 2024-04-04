@@ -32,3 +32,5 @@ Excluir imagem : Clique no botão excluir (marcado com "x") para remover uma ima
 
 - [Osidosos.com.br](https://www.osidosos.com.br) Sistema de Gerenciamento da Agenda Diária do Idoso
 
+![Tela](https://github.com/JorgeMello/image-accordion-gallery/blob/master/public/imagens/galeria-acordeon.png?raw=true)
+
