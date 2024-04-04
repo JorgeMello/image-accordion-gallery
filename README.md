@@ -1,60 +1,32 @@
-# CodeIgniter 4 Framework
+# Galeria de Imagens
 
-## What is CodeIgniter?
+## Accordion Effect
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Exibe uma coleção de imagens recuperadas de um banco de dados MySQL.
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Efeito acordeão : Fornece um efeito acordeão interativo nas imagens para uma melhor experiência do usuário.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Adicionar imagem : permite aos usuários adicionar novas imagens à galeria por meio de um formulário modal.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Excluir imagem : fornece funcionalidade para excluir imagens da galeria com um prompt de confirmação.
 
-## Important Change with index.php
+## Tecnologias utilizadas
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+PHP : Linguagem de script do lado do servidor para funcionalidade de back-end e interação com banco de dados.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+MySQL : Sistema de gerenciamento de banco de dados relacional para armazenamento de dados de imagem.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+HTML/CSS : Marcação e estilo para construir a estrutura e aparência da aplicação web.
 
-## Repository Management
+Bootstrap : estrutura de front-end para design responsivo e voltado para dispositivos móveis.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+JavaScript : linguagem de script do lado do cliente para aprimorar a interação do usuário e implementar comportamento dinâmico.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+**ATENÇÃO** crie sua imagens
 
-## Contributing
+## Como usar
 
-We welcome contributions from the community.
+Adicionar imagem : Clique no botão "Adicionar imagem" para abrir um formulário modal. Escolha um arquivo de imagem e clique no botão “Adicionar” para carregá-lo na galeria.
+Ver imagens : percorra a galeria para ver as imagens existentes. Passe o mouse sobre uma imagem para ampliá-la e revelar o botão excluir.
+Excluir imagem : Clique no botão excluir (marcado com "x") para remover uma imagem da galeria. Confirme a exclusão quando solicitado.
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
